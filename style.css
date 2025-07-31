@@ -1,0 +1,106 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #3f89ff, #2abbff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Calculator container */
+.calculator {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    display: grid;
+    grid-template-columns: repeat(4, 65px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 65px);
+    gap: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Display section */
+.display {
+    grid-column: 1 / -1;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.previous-operand {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.current-operand {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+button:active {
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(1);
+}
+
+.span-two {
+    grid-column: span 2;
+    background: #ff5e78;
+    color: white;
+}
+
+#equals {
+    background: #4caf50;
+    color: white;
+}
+
+#delete {
+    background: #ff9800;
+    color: white;
+}
+
+#clear {
+    background: #ff473a;
+    color: white;
+}
+
+#add,
+#subtract,
+#multiply,
+#divide {
+    background: #4d68ff;
+    color: white;
+}
